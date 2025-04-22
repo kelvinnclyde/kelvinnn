@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  background: linear-gradient(-45deg, #1c182b, #0d2b5f, #2b1642, #0d2b5f);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Luckiest Guy', cursive;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(-45deg, #1c182b, #0d2b5f, #2b1642, #0d2b5f);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+.navbar {
+  background-color: #333;
+  padding: 15px 0;
+  font-family: monospace;
+  font-size: large;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.navbar a:hover {
+  color: #472e83;
+  background-color: #00d9ff;
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.5);
+}
+
+.horizontal-sections {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.horizontal-sections .section {
+    min-width: 800px;
+    min-height: 200px;
+    flex-shrink: 0;
+}
+
+
+.section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+  font-size: large;
+  transition: background-color 0.5s ease;
+}
+
+.section h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #2575fc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.project {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+
+#contact a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content:left;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  margin-top: 40px;
+}
+
+#about {
+  background: linear-gradient(to bottom, #fef6e4, #ffffff);
+}
+
+#resume {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+}
+
+#projects {
+  background: linear-gradient(to bottom, #fce4ec, #ffffff);
+}
+
+#contact {
+  background-color: #e8f5e9;
+}
+
+@media (max-width: 768px) {
+  .horizontal-sections {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .horizontal-sections .section {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    max-width: 90%;
+  }
+}
